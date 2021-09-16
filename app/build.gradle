@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -34,5 +35,8 @@ android {
 dependencies {
     implementation project(path: ':core')
     implementation project(path: ':login-ui')
+    def dagger_version = "2.35.1"
+    kapt "com.google.dagger:dagger-android-processor:$dagger_version"
+    kapt "com.google.dagger:dagger-compiler:$dagger_version"
 }
 

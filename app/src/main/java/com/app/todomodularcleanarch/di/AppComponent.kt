@@ -1,6 +1,7 @@
 package com.app.todomodularcleanarch.di
 
 import android.app.Application
+import com.app.login_ui.di.LoginActivityBindingModule
 import com.app.todomodularcleanarch.TodoModularCleanArchApp
 import dagger.BindsInstance
 import dagger.Component
@@ -9,7 +10,7 @@ import dagger.android.support.AndroidSupportInjectionModule
 import javax.inject.Singleton
 
 @Singleton
-@Component(modules = [AndroidSupportInjectionModule::class])
+@Component(modules = [AndroidSupportInjectionModule::class, LoginActivityBindingModule::class])
 interface AppComponent : AndroidInjector<TodoModularCleanArchApp> {
 
     @Component.Builder
@@ -18,5 +19,6 @@ interface AppComponent : AndroidInjector<TodoModularCleanArchApp> {
 
         @BindsInstance
         fun application(application: Application): Builder
+
     }
 }
