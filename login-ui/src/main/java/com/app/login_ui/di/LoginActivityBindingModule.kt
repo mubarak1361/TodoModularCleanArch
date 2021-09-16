@@ -7,6 +7,7 @@ import dagger.android.ContributesAndroidInjector
 @Module
 abstract class LoginActivityBindingModule {
 
+
     @ContributesAndroidInjector
     abstract fun bindLoginActivity(): LoginActivity
 }

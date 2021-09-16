@@ -35,6 +35,8 @@ android {
 dependencies {
     implementation project(path: ':core')
     implementation project(path: ':login-ui')
+    implementation project(path: ':login-data')
+    implementation project(path: ':login-domain')
     def dagger_version = "2.35.1"
     kapt "com.google.dagger:dagger-android-processor:$dagger_version"
     kapt "com.google.dagger:dagger-compiler:$dagger_version"
